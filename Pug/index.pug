@@ -47,7 +47,7 @@ html
          .social 
             each icon in ["fa-facebook-f", "fa-twitter", "fa-instagram"]
                a(href="#"): i(class=`fab ${icon}`)
-               
+
          video(
             src="../Media/video.mp4" 
             loop 
@@ -59,11 +59,8 @@ html
 
       .menu 
          ul 
-            li: a(href="#") Home 
-            li: a(href="#") News 
-            li: a(href="#") Destination 
-            li: a(href="#") Blog 
-            li: a(href="#") Contact  
+            each name in ["Home", "News", "Destination", "Blog", "Contact"]
+               li: a(href="#") #{name}
 
 
 
