@@ -6,12 +6,11 @@ $linkColor: #111;
 .showcase {
    position: relative;
    z-index: 4;
-   left: 0;
    padding: 0 100px;
    margin: 0 auto;
    min-height: 100vh;
    color: white;
-   transition: 0.5s ease-out;
+   transition: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
    @media (max-width: 767px) {
       padding: 0 50px;
    }
@@ -19,13 +18,13 @@ $linkColor: #111;
       padding: 0 25px;
    }
    &.translate-md {
-      left: -300px;
+      transform: translateX(-300px);
    }
    &.translate-sm {
-      left: -200px;
+      transform: translateX(-200px);
    }
    &.translate {
-      left: -150px;
+      transform: translateX(-150px);
    }
    .overlay {
       background-color: rgba(#00f, 0.2);

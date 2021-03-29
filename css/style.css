@@ -20,13 +20,12 @@ a {
 .showcase {
   position: relative;
   z-index: 4;
-  left: 0;
   padding: 0 100px;
   margin: 0 auto;
   min-height: 100vh;
   color: white;
-  -webkit-transition: 0.5s ease-out;
-  transition: 0.5s ease-out;
+  -webkit-transition: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  transition: 0.5s cubic-bezier(0.95, 0.05, 0.795, 0.035);
 }
 
 @media (max-width: 767px) {
@@ -42,15 +41,18 @@ a {
 }
 
 .showcase.translate-md {
-  left: -300px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 .showcase.translate-sm {
-  left: -200px;
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
 }
 
 .showcase.translate {
-  left: -150px;
+  -webkit-transform: translateX(-150px);
+          transform: translateX(-150px);
 }
 
 .showcase .overlay {
