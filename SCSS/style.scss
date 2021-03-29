@@ -1,0 +1,195 @@
+@import "mixins", "utilities";
+
+// Variables
+$linkColor: #111;
+
+.showcase {
+   position: relative;
+   z-index: 4;
+   left: 0;
+   padding: 0 100px;
+   margin: 0 auto;
+   min-height: 100vh;
+   color: white;
+   transition: 0.5s ease-out;
+   @media (max-width: 767px) {
+      padding: 0 50px;
+   }
+   @media (max-width: 575px) {
+      padding: 0 25px;
+   }
+   &.translate-md {
+      left: -300px;
+   }
+   &.translate-sm {
+      left: -200px;
+   }
+   &.translate {
+      left: -150px;
+   }
+   .overlay {
+      background-color: rgba(#00f, 0.2);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      pointer-events: none;
+      z-index: -1;
+   }
+   header {
+      padding-top: 40px;
+      position: relative;
+      z-index: 100;
+      @include d-flex(center, space-between);
+      width: 100%;
+      .logo {
+         font-weight: 800;
+         text-transform: uppercase;
+         cursor: pointer;
+         letter-spacing: 4px;
+      }
+      .toggle {
+         width: 30px;
+         height: 25px;
+         @include d-grid(1fr, 3px);
+         align-items: center;
+         cursor: pointer;
+         &.active > * {
+            &:first-child {
+               transform: rotate(45deg) translate(5px, 6px);
+            }
+            &:nth-child(2) {
+               display: none;
+            }
+            &:last-child {
+               transform: rotate(-45deg) translate(4px, -5px);
+            }
+         }
+         div {
+            width: 100%;
+            height: 3px;
+            background-color: white;
+         }
+      }
+   }
+   .text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      h2 {
+         @include font(5rem, 800, true);
+         font-size: 5rem;
+         font-weight: 800;
+         line-height: 1;
+         @media (max-width: 991px) {
+            font-size: 4rem;
+         }
+         @media (max-width: 575px) {
+            font-size: 3rem;
+         }
+      }
+      h3 {
+         @include font(3.7rem, 700, true);
+         @media (max-width: 991px) {
+            font-size: 3rem;
+         }
+         @media (max-width: 767px) {
+            font-size: 2.3rem;
+         }
+         @media (max-width: 575px) {
+            font-size: 2rem;
+         }
+      }
+      p {
+         max-width: 70%;
+         font-size: 1.1rem;
+         font-weight: 600;
+         line-height: 1.5;
+         margin: 20px 0;
+         @media (max-width: 767px) {
+            font-size: 0.9rem;
+         }
+         @media (max-width: 575px) {
+            font-size: 0.85rem;
+         }
+         @media (max-width: 575px) {
+            max-width: 80%;
+         }
+      }
+      a {
+         @include font(1rem, 600, true);
+         display: inline-block;
+         margin-top: 10px;
+         padding: 10px 30px;
+         background-color: white;
+         color: $linkColor;
+         letter-spacing: 2px;
+         transition: 0.2s ease-out;
+         &:hover {
+            letter-spacing: 6px;
+         }
+         @media (max-width: 575px) {
+            font-size: 0.9rem;
+         }
+      }
+   }
+   .social {
+      position: absolute;
+      bottom: 20px;
+      z-index: 10;
+      @include d-grid(repeat(3, auto), 2rem);
+      i {
+         color: white;
+         font-size: 1.3rem;
+         transition: 0.2s ease-out;
+         &:hover {
+            transform: translateY(-5px);
+         }
+      }
+   }
+   video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      z-index: -2;
+      transition: 0.5s ease-out;
+   }
+}
+
+.menu {
+   position: absolute;
+   z-index: 3;
+   top: 0;
+   right: 0;
+   width: 300px;
+   height: 100vh;
+   @include d-flex(center, center);
+   background-color: white;
+   transition: 0.5s ease-out;
+   @media (max-width: 767px) {
+      width: 200px;
+   }
+   @media (max-width: 575px) {
+      width: 150px;
+   }
+   ul {
+      list-style: none;
+      @include d-grid(1fr, 1rem);
+      a {
+         @include font(20px, 700, true);
+         color: $linkColor;
+         transition: 0.5s ease-out;
+         &:hover {
+            color: darken(#03a9f4, 10);
+         }
+         @media (max-width: 575px) {
+            font-size: 1rem;
+         }
+      }
+   }
+}

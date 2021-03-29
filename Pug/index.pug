@@ -1,0 +1,70 @@
+doctype html 
+html 
+   head 
+      meta(charset="UTF-8")
+      meta(
+         http-equiv="X-UA-Compatible" 
+         content="IE=edge"
+      )
+      meta(
+         name="viewport" 
+         content="width=device-width, initial-scale=1.0"
+      )
+      // Font awesome 
+      script(
+         src="https://kit.fontawesome.com/ 54688c9bf4.js"
+         crossorigin="anonymous"
+      )
+      - const sources = ["https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css", "https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css", "https://kit-free.fontawesome.com/releases/latest/css/free.min.css"];
+
+      each src in sources  
+         link(rel="stylesheet" href=src media="all")
+
+      // style.css file 
+      link(
+         rel="stylesheet"
+         href="../css/style.css"
+      )
+      title Explore the world 
+
+   body  
+
+      // Start the main section
+      main.showcase 
+         .overlay 
+         header 
+            h2.logo Travel 
+            .toggle 
+               - for(let i = 0; i < 3; i++)
+                  div 
+         .text 
+            h2 Never Stop 
+            h3 exploring the world 
+            p.
+               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora voluptas blanditiis illo magni voluptates asperiores cupiditate commodi tenetur architecto cumque.
+            a(href="#") explore 
+
+         .social 
+            each icon in ["fa-facebook-f", "fa-twitter", "fa-instagram"]
+               a(href="#"): i(class=`fab ${icon}`)
+               
+         video(
+            src="../Media/video.mp4" 
+            loop 
+            autoplay 
+            muted
+         ) 
+      // End the main section 
+
+
+      .menu 
+         ul 
+            li: a(href="#") Home 
+            li: a(href="#") News 
+            li: a(href="#") Destination 
+            li: a(href="#") Blog 
+            li: a(href="#") Contact  
+
+
+
+      script(src="../JS/main.js") 

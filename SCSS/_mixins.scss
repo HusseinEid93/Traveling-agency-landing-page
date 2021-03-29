@@ -1,0 +1,19 @@
+@mixin font($font-size, $font-weight, $text-uppercase: false) {
+   font-size: $font-size;
+   font-weight: $font-weight;
+   @if ($text-uppercase) {
+      text-transform: uppercase;
+   }
+}
+
+@mixin d-flex($align-items, $justify-content) {
+   display: flex;
+   align-items: $align-items;
+   justify-content: $justify-content;
+}
+
+@mixin d-grid($grid-template-columns, $gap) {
+   display: grid;
+   grid-template-columns: $grid-template-columns;
+   gap: $gap;
+}
