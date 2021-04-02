@@ -4,9 +4,7 @@
 $linkColor: #111;
 
 .showcase {
-   @include d-grid(1fr, 6rem);
-   align-items: start;
-   justify-items: start;
+   @include d-flex(flex-start, space-between, column);
    position: relative;
    z-index: 4;
    padding: 0 100px;
@@ -30,7 +28,7 @@ $linkColor: #111;
       transform: translateX(-150px);
    }
    .overlay {
-      background-color: rgba(black, 0.2);
+      background-color: rgba(black, 0.35);
       position: absolute;
       top: 0;
       left: 0;
@@ -76,6 +74,7 @@ $linkColor: #111;
       }
    }
    .text {
+      margin: 5rem 0;
       h2 {
          @include font(5rem, 800, true);
          font-size: 5rem;
@@ -134,7 +133,9 @@ $linkColor: #111;
       }
    }
    .social {
-      @include d-grid(repeat(3, auto), 2rem);
+      position: relative;
+      top: -20px;
+      @include d-grid(repeat(3, max-content), 2rem);
       i {
          color: white;
          font-size: 1.3rem;
@@ -179,9 +180,9 @@ $linkColor: #111;
       a {
          @include font(20px, 700, true);
          color: $linkColor;
-         transition: 0.5s ease-out;
+         transition: 0.3s ease-out;
          &:hover {
-            color: darken(#03a9f4, 10);
+            color: #854fee;
          }
          @media (max-width: 575px) {
             font-size: 1rem;
