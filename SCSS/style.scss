@@ -73,6 +73,7 @@ $linkColor: #111;
       }
    }
    .text {
+      margin: 6rem 0;
       h2 {
          @include font(5rem, 800, true);
          font-size: 5rem;
