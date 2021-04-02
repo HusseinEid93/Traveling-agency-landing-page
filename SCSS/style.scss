@@ -4,6 +4,9 @@
 $linkColor: #111;
 
 .showcase {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
    position: relative;
    z-index: 4;
    padding: 0 100px;
@@ -27,7 +30,7 @@ $linkColor: #111;
       transform: translateX(-150px);
    }
    .overlay {
-      background-color: rgba(#00f, 0.2);
+      background-color: rgba(black, 0.3);
       position: absolute;
       top: 0;
       left: 0;
@@ -73,9 +76,8 @@ $linkColor: #111;
       }
    }
    .text {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      // margin-top: calc(50vh - 68px);
+      // transform: translateY(-50%);
       h2 {
          @include font(5rem, 800, true);
          font-size: 5rem;
@@ -134,9 +136,8 @@ $linkColor: #111;
       }
    }
    .social {
-      position: absolute;
-      bottom: 20px;
-      z-index: 10;
+      width: max-content;
+      margin: 1rem 0;
       @include d-grid(repeat(3, auto), 2rem);
       i {
          color: white;
