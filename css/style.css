@@ -17,6 +17,15 @@ a {
 }
 
 .showcase {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 6rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  justify-items: start;
   position: relative;
   z-index: 4;
   padding: 0 100px;
@@ -122,10 +131,6 @@ a {
   background-color: white;
 }
 
-.showcase .text {
-  margin: 6rem 0;
-}
-
 .showcase .text h2 {
   font-size: 5rem;
   font-weight: 800;
@@ -222,11 +227,6 @@ a {
 }
 
 .showcase .social {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  position: absolute;
-  bottom: 20px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[3];
